@@ -235,7 +235,7 @@ Create a separate list
  jailed environment for mount recovery / bootloader config / testing
 chroot location /bin/bash
 
--- chroot --
+-- reset --
 Fix a messed up terminal.
 reset
 
@@ -303,6 +303,10 @@ diff file1 file2 > output.txt
 -- icdiff --
 Another diff utility.
 sudo apt-get install icdiff
+
+-- cmp --
+compare binaries or text files, 1 line output
+cmp path/file1 path/file2.
 
 -- chown --
 changes ownership of a file
@@ -455,6 +459,11 @@ sudo apt-get install feh
 outputs a string to screen or pipe etc
 echo hello world > output.txt
 echo hello world >> output.txt
+
+-- tput --
+Changes text colour in the terminal, 0 resets
+tput setaf 3 && echo hi
+tput setab 3 && echo hi
 
 -- printr --
 Prints text to the terminal
@@ -804,7 +813,7 @@ sudo apt-get install youtube-dl
 
 -- flac --
 Encode to and from flac
-flac --compression-level-8 infile.wav
+flac --best --verify -T "ALBUM=album_name" *.wav
 flac -d in file.flac
 
 -- ffmpeg --
@@ -912,6 +921,17 @@ telnet mapscii.me
 A benchmarking tool that renders gears
 glxgears
 sudo apt-get install mesa-utils
+
+-- xdotool --
+A tool to mimic keyboard and mouse input
+xdotool type "hello"
+xdotool mouse 3
+sudo apt-get install xdotool
+
+-- tldr --
+A 1-page man common use examples
+tldr executable
+sudo apt-get install tldr
 
 
 =====================================
